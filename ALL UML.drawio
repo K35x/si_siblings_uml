@@ -8,7 +8,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VXcRh_JVWM-AaCjfEu4w" name="USE CASE">
-    <mxGraphModel dx="3170" dy="2460" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -43,10 +43,10 @@
           <mxGeometry height="60" width="160" x="160" y="560" as="geometry" />
         </mxCell>
         <mxCell id="uc18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Melihat Riwayat Pembayaran" vertex="1">
-          <mxGeometry height="60" width="160" x="600" y="560" as="geometry" />
+          <mxGeometry height="60" width="160" x="600" y="550" as="geometry" />
         </mxCell>
         <mxCell id="uc8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Memantau Status Order" vertex="1">
-          <mxGeometry height="60" width="160" x="360" y="640" as="geometry" />
+          <mxGeometry height="60" width="160" x="400" y="640" as="geometry" />
         </mxCell>
         <mxCell id="uc14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Mengubah Status Order" vertex="1">
           <mxGeometry height="60" width="160" x="600" y="720" as="geometry" />
@@ -617,7 +617,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="tM6HgqM-kyHcCP9BrFBp" name="DFD LVL 0">
-    <mxGraphModel dx="812" dy="476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -989,7 +989,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GvG0NxixPPAtITq49C97" name="ERD">
-    <mxGraphModel dx="1160" dy="1780" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2008" dy="2114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1804,11 +1804,43 @@
             <mxPoint x="990" y="180" as="targetPoint" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-2" parent="1" style="shape=mxgraph.erd.entity;whiteSpace=wrap;html=1;fillColor=#006EAF;fontColor=#ffffff;strokeColor=#006EAF;" value="pesanan" vertex="1">
+          <mxGeometry height="60" width="140" x="2620" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-3" parent="1" style="shape=mxgraph.erd.entity;whiteSpace=wrap;html=1;fillColor=#006EAF;fontColor=#ffffff;strokeColor=#006EAF;" value="detail_pesanan" vertex="1">
+          <mxGeometry height="60" width="140" x="2930" y="270" as="geometry" />
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-4" parent="1" style="shape=mxgraph.erd.entity;whiteSpace=wrap;html=1;fillColor=#006EAF;fontColor=#ffffff;strokeColor=#006EAF;" value="produk" vertex="1">
+          <mxGeometry height="60" width="140" x="3040" y="570" as="geometry" />
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-6" parent="1" style="shape=rhombus;whiteSpace=wrap;html=1;fillColor=#006EAF;fontColor=#ffffff;strokeColor=#006EAF;" value="memiliki" vertex="1">
+          <mxGeometry height="60" width="120" x="2750" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-7" parent="1" style="shape=rhombus;whiteSpace=wrap;html=1;fillColor=#006EAF;fontColor=#ffffff;strokeColor=#006EAF;" value="termasuk" vertex="1">
+          <mxGeometry height="60" width="120" x="3060" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-8" edge="1" parent="1" style="endArrow=none;html=1;" target="b9tZpCnWL6KzS-fh9juq-5" value="1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="2527.4999999999995" y="470" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-10" edge="1" parent="1" source="b9tZpCnWL6KzS-fh9juq-2" style="endArrow=none;html=1;" target="b9tZpCnWL6KzS-fh9juq-6" value="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-11" edge="1" parent="1" source="b9tZpCnWL6KzS-fh9juq-6" style="endArrow=ERmany;html=1;" target="b9tZpCnWL6KzS-fh9juq-3" value="N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-12" edge="1" parent="1" source="b9tZpCnWL6KzS-fh9juq-4" style="endArrow=none;html=1;" target="b9tZpCnWL6KzS-fh9juq-7" value="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-13" edge="1" parent="1" source="b9tZpCnWL6KzS-fh9juq-7" style="endArrow=ERmany;html=1;" target="b9tZpCnWL6KzS-fh9juq-3" value="N">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="qvWeedrmNqDR2XYkJIAQ" name="Page-9">
-    <mxGraphModel dx="1305" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="967" dy="488" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
