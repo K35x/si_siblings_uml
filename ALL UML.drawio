@@ -2412,7 +2412,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="qvWeedrmNqDR2XYkJIAQ" name="Page-9">
-    <mxGraphModel dx="1305" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="637" dy="321" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2563,10 +2563,11 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="e11" edge="1" parent="1" source="p2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d5" value="2.7 Simpan Ukuran">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry relative="1" x="-0.2774" as="geometry">
+            <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1030" y="440" />
-              <mxPoint x="1030" y="600" />
+              <mxPoint x="280" y="490" />
+              <mxPoint x="280" y="600" />
             </Array>
           </mxGeometry>
         </mxCell>
