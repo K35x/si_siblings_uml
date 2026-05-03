@@ -8,7 +8,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VXcRh_JVWM-AaCjfEu4w" name="USE CASE">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2385" dy="1875" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -293,7 +293,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="Oc-_Ui-vC9bmee6qN5CR" name="SEQUENCE DIAGRAM">
-    <mxGraphModel dx="2567" dy="937" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="3460" dy="1318" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -472,7 +472,7 @@
     </mxGraphModel>
   </diagram>
   <diagram name="Owner SEQUENCE DIAGRAM" id="uJZTTB6GyLzPCvLbjyqw">
-    <mxGraphModel dx="2253" dy="803" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="2ubHHxHX7jwDsHXqUmUy-0" />
         <mxCell id="2ubHHxHX7jwDsHXqUmUy-1" parent="2ubHHxHX7jwDsHXqUmUy-0" />
@@ -1135,7 +1135,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="tM6HgqM-kyHcCP9BrFBp" name="DFD LVL 0">
-    <mxGraphModel dx="982" dy="562" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2391,7 +2391,7 @@
         <mxCell id="b9tZpCnWL6KzS-fh9juq-7" parent="1" style="shape=rhombus;whiteSpace=wrap;html=1;fillColor=#006EAF;fontColor=#ffffff;strokeColor=#006EAF;" value="termasuk" vertex="1">
           <mxGeometry height="60" width="120" x="3060" y="420" as="geometry" />
         </mxCell>
-        <mxCell id="b9tZpCnWL6KzS-fh9juq-8" edge="1" parent="1" style="endArrow=none;html=1;" value="1">
+        <mxCell id="b9tZpCnWL6KzS-fh9juq-8" edge="1" parent="1" style="endArrow=none;html=1;" target="b9tZpCnWL6KzS-fh9juq-5" value="1">
           <mxGeometry relative="1" as="geometry">
             <mxPoint x="2527.4999999999995" y="470" as="sourcePoint" />
           </mxGeometry>
@@ -2412,7 +2412,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="qvWeedrmNqDR2XYkJIAQ" name="Page-9">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1305" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -2527,70 +2527,80 @@
         <mxCell id="e6" edge="1" parent="1" source="p2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d2" value="2.2 Simpan Pelanggan">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="600" y="270" />
+              <mxPoint x="410" y="250" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e7" edge="1" parent="1" source="d2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="p2" value="2.3 Data Pelanggan">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="580" y="285" />
+              <mxPoint x="450" y="285" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e8" edge="1" parent="1" source="p2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d3" value="2.4 Simpan Order">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="620" y="400" />
+              <mxPoint x="590" y="380" />
+              <mxPoint x="590" y="380" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e9" edge="1" parent="1" source="d3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="p2" value="2.5 Data Order">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="605" y="415" />
+              <mxPoint x="650" y="400" />
+              <mxPoint x="650" y="400" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e10" edge="1" parent="1" source="p2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d4" value="2.6 Simpan Item">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="620" y="500" />
+              <mxPoint x="540" y="480" />
+              <mxPoint x="540" y="480" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e11" edge="1" parent="1" source="p2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d5" value="2.7 Simpan Ukuran">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="620" y="600" />
+              <mxPoint x="1030" y="440" />
+              <mxPoint x="1030" y="600" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e12" edge="1" parent="1" source="p2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d6" value="2.8 Simpan Addon">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="620" y="700" />
+              <mxPoint x="640" y="420" />
+              <mxPoint x="640" y="700" />
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="e13" edge="1" parent="1" source="d8" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="p2" value="2.9 Data Produk">
+        <mxCell id="e13" edge="1" parent="1" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" value="2.9 Data Produk">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="595" y="930" />
+              <mxPoint x="610" y="940" />
+              <mxPoint x="610" y="460" />
             </Array>
+            <mxPoint x="700" y="940" as="sourcePoint" />
+            <mxPoint x="500" y="460" as="targetPoint" />
           </mxGeometry>
         </mxCell>
         <mxCell id="e14" edge="1" parent="1" source="d9" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="p2" value="2.10 Data Varian">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="590" y="1010" />
+              <mxPoint x="580" y="1010" />
+              <mxPoint x="580" y="500" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e15" edge="1" parent="1" source="d10" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="p2" value="2.11 Data Addon Produk">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="585" y="1090" />
+              <mxPoint x="550" y="1090" />
+              <mxPoint x="550" y="520" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2602,30 +2612,35 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="e17" edge="1" parent="1" source="kasir" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="p3" value="3.1 Data Pembayaran">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry relative="1" x="-0.3514" as="geometry">
+            <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="80" y="750" />
+              <mxPoint x="190" y="690" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e18" edge="1" parent="1" source="d3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="p3" value="3.2 Data Tagihan">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="590" y="430" />
+              <mxPoint x="1000" y="400" />
+              <mxPoint x="1000" y="750" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e19" edge="1" parent="1" source="p3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d7" value="3.3 Simpan Pembayaran">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="610" y="830" />
+              <mxPoint x="580" y="810" />
+              <mxPoint x="580" y="810" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e20" edge="1" parent="1" source="p3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d3" value="3.4 Update Status Order">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="570" y="660" />
+              <mxPoint x="410" y="550" />
+              <mxPoint x="970" y="550" />
+              <mxPoint x="970" y="420" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2633,16 +2648,18 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="e22" edge="1" parent="1" source="p3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="kasir" value="3.6 Konfirmasi Bayar">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry relative="1" x="-0.2956" as="geometry">
+            <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="60" y="770" />
+              <mxPoint x="100" y="770" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e23" edge="1" parent="1" source="p4" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d7" value="4.1 Simpan Invoice">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="560" y="1050" />
+              <mxPoint x="650" y="1050" />
+              <mxPoint x="650" y="830" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2662,9 +2679,9 @@
         </mxCell>
         <mxCell id="e26" edge="1" parent="1" source="d3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="p5" value="5.2 Data Order">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1050" y="380" />
-              <mxPoint x="1050" y="380" />
+              <mxPoint x="820" y="360" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2678,8 +2695,8 @@
         <mxCell id="e28" edge="1" parent="1" source="p5" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d3" value="5.4 Update Status">
           <mxGeometry relative="1" as="geometry">
             <Array as="points">
-              <mxPoint x="1010" y="420" />
-              <mxPoint x="1010" y="420" />
+              <mxPoint x="1050" y="380" />
+              <mxPoint x="1050" y="380" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -2698,34 +2715,32 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="e31" edge="1" parent="1" source="p6" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d8" value="6.2 Kelola Produk">
-          <mxGeometry relative="1" x="-0.2747" as="geometry">
+          <mxGeometry relative="1" x="-0.6406" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1080" y="800" />
-              <mxPoint x="1080" y="930" />
+              <mxPoint x="1350" y="800" />
+              <mxPoint x="1350" y="930" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e32" edge="1" parent="1" source="p6" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d9" value="6.3 Kelola Varian">
-          <mxGeometry relative="1" x="-0.149" as="geometry">
+          <mxGeometry relative="1" x="-0.4516" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1060" y="780" />
-              <mxPoint x="1060" y="1010" />
+              <mxPoint x="1250" y="1010" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e33" edge="1" parent="1" source="p6" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d10" value="6.4 Kelola Addon">
-          <mxGeometry relative="1" x="-0.0932" as="geometry">
+          <mxGeometry relative="1" x="-0.033" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="1040" y="760" />
-              <mxPoint x="1040" y="1090" />
+              <mxPoint x="1160" y="1090" />
             </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="e34" edge="1" parent="1" source="p6" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d11" value="6.5 Kelola Kategori">
-          <mxGeometry relative="1" x="-0.0467" as="geometry">
+          <mxGeometry relative="1" x="0.6193" as="geometry">
             <mxPoint as="offset" />
             <Array as="points">
               <mxPoint x="1020" y="740" />
@@ -2734,7 +2749,8 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="e35" edge="1" parent="1" source="p6" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;" target="d1" value="6.6 Kelola User">
-          <mxGeometry relative="1" as="geometry">
+          <mxGeometry relative="1" x="0.1903" as="geometry">
+            <mxPoint as="offset" />
             <Array as="points">
               <mxPoint x="1060" y="720" />
               <mxPoint x="1060" y="110" />
