@@ -1414,9 +1414,6 @@
         <mxCell id="h6dZXkeZKgHJ-o58sHy_-108" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#09555B;strokeColor=#BAC8D3;fontColor=#EEEEEE;" value="nama_addon" vertex="1">
           <mxGeometry height="40" width="100" x="1090" y="160" as="geometry" />
         </mxCell>
-        <mxCell id="h6dZXkeZKgHJ-o58sHy_-217" edge="1" parent="1" source="h6dZXkeZKgHJ-o58sHy_-109" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;labelBackgroundColor=none;strokeColor=#0B4D6A;fontColor=default;" target="h6dZXkeZKgHJ-o58sHy_-107" value="">
-          <mxGeometry relative="1" as="geometry" />
-        </mxCell>
         <mxCell id="h6dZXkeZKgHJ-o58sHy_-109" parent="1" style="ellipse;whiteSpace=wrap;html=1;align=center;labelBackgroundColor=none;fillColor=#09555B;strokeColor=#BAC8D3;fontColor=#EEEEEE;" value="keterangan" vertex="1">
           <mxGeometry height="40" width="100" x="875" y="285" as="geometry" />
         </mxCell>
