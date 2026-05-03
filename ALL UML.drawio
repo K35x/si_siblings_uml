@@ -8,7 +8,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="VXcRh_JVWM-AaCjfEu4w" name="USE CASE">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1985" dy="1673" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -30,7 +30,7 @@
         <mxCell id="uc15" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Mencetak Invoice" vertex="1">
           <mxGeometry height="60" width="160" x="390" y="280" as="geometry" />
         </mxCell>
-        <mxCell id="uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Menambahkan Item Order" vertex="1">
+        <mxCell id="uc4" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Menambahkan Item Pesanan" vertex="1">
           <mxGeometry height="60" width="160" x="160" y="340" as="geometry" />
         </mxCell>
         <mxCell id="uc5" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Menginput Ukuran per Item" vertex="1">
@@ -45,10 +45,10 @@
         <mxCell id="uc18" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Melihat Riwayat Pembayaran" vertex="1">
           <mxGeometry height="60" width="160" x="600" y="550" as="geometry" />
         </mxCell>
-        <mxCell id="uc8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Memantau Status Order" vertex="1">
+        <mxCell id="uc8" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Memantau Status Pesananr" vertex="1">
           <mxGeometry height="60" width="160" x="400" y="640" as="geometry" />
         </mxCell>
-        <mxCell id="uc14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Mengubah Status Order" vertex="1">
+        <mxCell id="uc14" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Mengubah Status Pesanan" vertex="1">
           <mxGeometry height="60" width="160" x="600" y="720" as="geometry" />
         </mxCell>
         <mxCell id="uc16" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Melihat Laporan Rekap Penjualan" vertex="1">
@@ -159,7 +159,7 @@
             <mxPoint x="428" y="203" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Membuat Order" vertex="1">
+        <mxCell id="uc3" parent="1" style="ellipse;whiteSpace=wrap;html=1;fillColor=#FFF9C4;strokeColor=#A80036;fontColor=#333333;" value="Membuat Pesanan" vertex="1">
           <mxGeometry height="60" width="160" x="160" y="220" as="geometry" />
         </mxCell>
       </root>
@@ -467,7 +467,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="TvlXbYEz9vcw54TGLS-W" name="CLASS DIAGRAM">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="1374" dy="694" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -566,7 +566,9 @@
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
         <mxCell id="RjcbR4IAMG3fsZbUs0mn-3" parent="1" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;" value="Order" vertex="1">
-          <mxGeometry height="480" width="260" x="250" y="500" as="geometry" />
+          <mxGeometry height="480" width="260" x="250" y="500" as="geometry">
+            <mxRectangle height="30" width="70" x="250" y="500" as="alternateBounds" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="RjcbR4IAMG3fsZbUs0mn-4" parent="RjcbR4IAMG3fsZbUs0mn-3" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" value="order_id: INT" vertex="1">
           <mxGeometry height="30" width="260" y="30" as="geometry" />
@@ -989,7 +991,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="GvG0NxixPPAtITq49C97" name="ERD">
-    <mxGraphModel dx="2008" dy="2114" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
