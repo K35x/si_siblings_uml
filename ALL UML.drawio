@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" pages="8">
+<mxfile host="app.diagrams.net" pages="9">
   <diagram name="MAIN" id="4tXiaz6X-lOyyWfjuFEi">
     <mxGraphModel dx="1305" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
@@ -171,7 +171,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="iPsh6lVHvMsZjoRbyudc" name="ACTIVITY DIAGRAM KASIR">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="870" dy="439" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1295,7 +1295,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="tM6HgqM-kyHcCP9BrFBp" name="DFD LVL 0">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="2224" dy="694" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -1373,6 +1373,118 @@
         </mxCell>
         <mxCell id="P2AsosD9WGE7LSUCISYD-28" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;fontSize=11;fontFamily=Times New Roman;labelBackgroundColor=none;fontColor=#1A1A1A;" value="TOTAL PEMBAYARAN" vertex="1">
           <mxGeometry height="30" width="130" x="430" y="305" as="geometry" />
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-1" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-2" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;align=center;" target="KCKJoJE2q_-BaF9XxY_2-4" value="Data Login">
+          <mxGeometry relative="1" x="-0.001" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="165" y="516" />
+              <mxPoint x="165" y="516" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-2" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;" value="Kasir" vertex="1">
+          <mxGeometry height="120" width="200" x="-135" y="506" as="geometry" />
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-3" parent="1" style="rounded=0;whiteSpace=wrap;html=1;fontSize=13;fontStyle=1;" value="Owner" vertex="1">
+          <mxGeometry height="120" width="200" x="785" y="506" as="geometry" />
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-4" parent="1" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fontSize=13;fontStyle=1;" value="0&#xa;Sistem Pemesanan&#xa;Konveksi Siblings" vertex="1">
+          <mxGeometry height="300" width="300" x="259" y="400" as="geometry" />
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-5" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;align=center;" target="KCKJoJE2q_-BaF9XxY_2-4" value="Data Pelanggan &amp;amp; Pesanan">
+          <mxGeometry relative="1" x="0.0007" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="165" y="576" />
+              <mxPoint x="165" y="576" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-6" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-2" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;align=center;" target="KCKJoJE2q_-BaF9XxY_2-4" value="Data Pembayaran">
+          <mxGeometry relative="1" x="-0.0005" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="165" y="556" />
+              <mxPoint x="165" y="556" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-7" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-4" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;align=center;" target="KCKJoJE2q_-BaF9XxY_2-2" value="Status Login">
+          <mxGeometry relative="1" x="-0.0009" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="165" y="536" />
+              <mxPoint x="165" y="536" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-8" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-4" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="KCKJoJE2q_-BaF9XxY_2-2" value="Ringkasan Order &amp; Invoice">
+          <mxGeometry relative="1" x="-0.0011" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="165" y="596" />
+              <mxPoint x="165" y="596" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-9" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-4" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="KCKJoJE2q_-BaF9XxY_2-2" value="Konfirmasi Pembayaran">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="165" y="616" />
+              <mxPoint x="165" y="616" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-10" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="KCKJoJE2q_-BaF9XxY_2-4" value="Data Login">
+          <mxGeometry relative="1" x="0.0004" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="665" y="516" />
+              <mxPoint x="665" y="516" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-11" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="KCKJoJE2q_-BaF9XxY_2-4" value="Update Status Order">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="675" y="556" />
+              <mxPoint x="675" y="556" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-12" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-3" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="KCKJoJE2q_-BaF9XxY_2-4" value="Data Master (Produk, Kategori, User)">
+          <mxGeometry relative="1" x="0.0005" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="675" y="576" />
+              <mxPoint x="675" y="576" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-13" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-4" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="KCKJoJE2q_-BaF9XxY_2-3" value="Status Login">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="665" y="536" />
+              <mxPoint x="665" y="536" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-14" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-4" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="KCKJoJE2q_-BaF9XxY_2-3" value="Laporan Penjualan &amp; Keuangan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="665" y="596" />
+              <mxPoint x="665" y="596" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="KCKJoJE2q_-BaF9XxY_2-15" edge="1" parent="1" source="KCKJoJE2q_-BaF9XxY_2-4" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;fontSize=11;" target="KCKJoJE2q_-BaF9XxY_2-3" value="Konfirmasi Master Data">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="665" y="616" />
+              <mxPoint x="665" y="616" />
+            </Array>
+          </mxGeometry>
         </mxCell>
       </root>
     </mxGraphModel>
@@ -2639,6 +2751,14 @@
         <mxCell id="b9tZpCnWL6KzS-fh9juq-13" edge="1" parent="1" source="b9tZpCnWL6KzS-fh9juq-7" style="endArrow=ERmany;html=1;" target="b9tZpCnWL6KzS-fh9juq-3" value="N">
           <mxGeometry relative="1" as="geometry" />
         </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="_scUjrYAeoTGdx9N2PkL" name="Page-9">
+    <mxGraphModel dx="1740" dy="879" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
       </root>
     </mxGraphModel>
   </diagram>
