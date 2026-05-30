@@ -410,243 +410,93 @@ endif
 stop
 @enduml
 ```
+### Sequence Diagram
 
-### N. Sequence Diagram Simpan Pesanan
+| No | Judul | Aktor |
+|----|-------|-------|
+| 1 | [Membuat Pesanan](#1-membuat-pesanan) | Kasir |
+| 2 | [Menyimpan Pesanan](#2-menyimpan-pesanan) | Kasir |
+| 3 | [Mencatat Pembayaran (Kasir)](#3-mencatat-pembayaran-kasir) | Kasir |
+| 4 | [Melihat / Cetak Invoice](#4-melihatcetak-invoice) | Kasir |
+| 5 | [Memproses Pengambilan Barang](#5-memproses-pengambilan-barang) | Kasir |
+| 6 | [Mengelola Produk](#6-mengelola-produk) | Owner |
+| 7 | [Mengelola Varian Produk](#7-mengelola-varian-produk) | Owner |
+| 8 | [Mengelola Opsi Varian](#8-mengelola-opsi-varian) | Owner |
+| 9 | [Mengelola Tipe Sablon](#9-mengelola-tipe-sablon) | Owner |
+| 10 | [Mengelola Stok](#10-mengelola-stok) | Owner |
+| 11 | [Mengelola Status Produksi / Pesanan](#11-mengelola-status-produksipesanan) | Owner |
+| 12 | [Melihat Dashboard / Laporan](#12-melihat-dashboardlaporan) | Owner |
+| 13 | [Mencatat Pembayaran (Owner)](#13-mencatat-pembayaran-owner) | Owner |
+ 
+---
 
-```plantuml
-@startuml
-actor Kasir
-boundary "Form Pemesanan" as Boundary
-control "TransactionController" as Control
-entity "TransactionModel" as Entity
-database "Database" as DB
-
-Kasir -> Boundary : Submit pesanan
-Boundary -> Control : request simpan pesanan
-Control -> Control : validasi CSRF, session, dan input
-Control -> Entity : createOrder(data session)
-Entity -> DB : INSERT customers
-Entity -> DB : INSERT orders
-Entity -> DB : INSERT order_items
-Entity -> DB : INSERT order_item_details
-Entity -> DB : UPDATE variant_options.quantity
-Entity -> DB : INSERT order_status_history
-DB --> Entity : hasil penyimpanan
-Entity --> Control : order_code/order_id
-Control -> Control : clear session transaksi
-Control --> Boundary : redirect invoice
-Boundary --> Kasir : tampilkan invoice
-@enduml
-```
-
-### O. Sequence Diagram Catat Pembayaran
-
-```plantuml
-@startuml
-actor Kasir
-boundary "Halaman Detail Pesanan" as Boundary
-control "TransactionController" as Control
-entity "TransactionModel" as Entity
-database "Database" as DB
-
-Kasir -> Boundary : Input pembayaran
-Boundary -> Control : request simpan pembayaran
-Control -> Control : validasi CSRF dan nominal
-Control -> Entity : recordPayment(orderId, data, userId)
-Entity -> DB : BEGIN TRANSACTION
-Entity -> DB : INSERT payments
-Entity -> DB : SELECT total paid dan grand_total
-alt Syarat status terpenuhi
-  Entity -> DB : UPDATE orders.order_status
-  Entity -> DB : INSERT order_status_history
-end
-Entity -> DB : COMMIT
-Entity --> Control : payment_id
-Control --> Boundary : response sukses
-Boundary --> Kasir : tampilkan status pembayaran terbaru
-@enduml
-```
-
-### P. Sequence Diagram Update Status Produksi/Pesanan
-
-```plantuml
-@startuml
-actor Owner
-boundary "Halaman Status Pesanan" as Boundary
-control "TransactionController" as Control
-database "Database" as DB
-
-Owner -> Boundary : Pilih status berikutnya
-Boundary -> Control : request update status
-Control -> Control : validasi CSRF dan hak akses Owner
-Control -> DB : BEGIN TRANSACTION
-Control -> DB : SELECT order FOR UPDATE
-Control -> Control : validasi transisi status
-alt Transisi valid
-  Control -> DB : UPDATE orders.order_status
-  Control -> DB : INSERT order_status_history
-  alt Status cancelled
-    Control -> DB : UPDATE payments SET void
-    Control -> DB : UPDATE variant_options restore stok
-  end
-  Control -> DB : COMMIT
-  Control --> Boundary : response sukses
-else Transisi tidak valid
-  Control -> DB : ROLLBACK
-  Control --> Boundary : response gagal
-end
-Boundary --> Owner : tampilkan hasil update
-@enduml
-```
+### 1. Membuat Pesanan
+- [![Membuat Pesanan](https://www.plantuml.com/plantuml/png/RPBTQkCm48NlzHH3hbf8Ng0NIpTE2sKt4AZt0SRH99bQ7dcbKM7VViToJVe7lZ3wZkQSW-O-AoOjGt3A6WYUwMyXEH9iO4z3Lr3XG1a5nJayQapm2pCdryKY7jC_M3t6D9Xcc5Khm0n_djmnYgOOODKcb6mtEKepdmLALTKsZiHSRSOXHL-Eke-UGcM7lVEes64cMEtU_YhPRPsh4M3pmupW3hQbHxXWm045nYM8CsQAjZ55cafbXTCKzQemPeh3tXHdqfgX_zahdsvkdPqQsssDFJ_yVcXQ62jVmoicHbb373El8MCNeZWJRfPPKt2pF54YoLmdBK4gcWS1Jaurmr94SHWvzDPY2lgffH6-V0dXIP43iDBmNU4BQv7pZEUs5RzYO6_JWMKiUiMBLowTHiMtkHzpMCWEBz2JVVQqBoZdzyxeVHiRMwcRwUxjUzVCmsZTflFfUgQSRIa-62UMSu_sEf-66vzJt5q1U1ufTPWAktiIRply7m)](https://www.plantuml.com/plantuml/png/RPBTQkCm48NlzHH3hbf8Ng0NIpTE2sKt4AZt0SRH99bQ7dcbKM7VViToJVe7lZ3wZkQSW-O-AoOjGt3A6WYUwMyXEH9iO4z3Lr3XG1a5nJayQapm2pCdryKY7jC_M3t6D9Xcc5Khm0n_djmnYgOOODKcb6mtEKepdmLALTKsZiHSRSOXHL-Eke-UGcM7lVEes64cMEtU_YhPRPsh4M3pmupW3hQbHxXWm045nYM8CsQAjZ55cafbXTCKzQemPeh3tXHdqfgX_zahdsvkdPqQsssDFJ_yVcXQ62jVmoicHbb373El8MCNeZWJRfPPKt2pF54YoLmdBK4gcWS1Jaurmr94SHWvzDPY2lgffH6-V0dXIP43iDBmNU4BQv7pZEUs5RzYO6_JWMKiUiMBLowTHiMtkHzpMCWEBz2JVVQqBoZdzyxeVHiRMwcRwUxjUzVCmsZTflFfUgQSRIa-62UMSu_sEf-66vzJt5q1U1ufTPWAktiIRply7m)
+ 
+---
+ 
+### 2. Menyimpan Pesanan
+- [![Menyimpan Pesanan](https://www.plantuml.com/plantuml/png/XLF1Rjim3BthAuYSDi3P1_GmD77ImHYS58bx3XY9M8J8aYjH1VBtevLuQu2rkn5yJu_FVFHZOeoSUwVOiYFOqsichmdcq9A_s7v03y-KqADN2ZM723ynsQYE8Nk3yGApfn1xg4-apo7p3331IwDqy1o3WraNqITvQ8Elhpr7iR2wMf6NiPSxKXiCkIlUAeECHqm4izMjAiXggLHn0VFlCWmUO9-FlMKORawb9qXN2vB4Cdq9qL0SDRugwKxO6pfhH0Vg_UwfWaGfYOCAZ7oqzKFcYTmAMKT2fkqez5Uk0Ytxgo0dYeqHyNRahvR2Nwv_D1leTelDVb5tpNRp7cms-_Mk0vt5Nayn_GChCpu43fQf_nmz66Aqxh-aP7_vEzBByshHhMKxqQBdGnZ6NDAtrumbhW_rv9OufyF9ZZk_ezNRjcqw9VLyMkVDWgbkbPRSovCfd9C4u_ua-YurxGZZ51PmEPrpieKotKCaOoDfbXZVWjLKBaB0wzKy06C_M7SkELy9Z-ID_0U_0G)](https://www.plantuml.com/plantuml/png/XLF1Rjim3BthAuYSDi3P1_GmD77ImHYS58bx3XY9M8J8aYjH1VBtevLuQu2rkn5yJu_FVFHZOeoSUwVOiYFOqsichmdcq9A_s7v03y-KqADN2ZM723ynsQYE8Nk3yGApfn1xg4-apo7p3331IwDqy1o3WraNqITvQ8Elhpr7iR2wMf6NiPSxKXiCkIlUAeECHqm4izMjAiXggLHn0VFlCWmUO9-FlMKORawb9qXN2vB4Cdq9qL0SDRugwKxO6pfhH0Vg_UwfWaGfYOCAZ7oqzKFcYTmAMKT2fkqez5Uk0Ytxgo0dYeqHyNRahvR2Nwv_D1leTelDVb5tpNRp7cms-_Mk0vt5Nayn_GChCpu43fQf_nmz66Aqxh-aP7_vEzBByshHhMKxqQBdGnZ6NDAtrumbhW_rv9OufyF9ZZk_ezNRjcqw9VLyMkVDWgbkbPRSovCfd9C4u_ua-YurxGZZ51PmEPrpieKotKCaOoDfbXZVWjLKBaB0wzKy06C_M7SkELy9Z-ID_0U_0G)
+ 
+---
+ 
+### 3. Mencatat Pembayaran Kasir
+- [![Mencatat Pembayaran Kasir](https://www.plantuml.com/plantuml/png/ZLB1Ri8m3BtdAonE834-WCC4jDrKRIs8XZDocmWYqgHBqadz-vcMJaNQOQSaVi_FptOsFg0BRQrPK45BAEHNAqqbuGKoEZ5WW8EiI-pGeO4FzCenXbMmxl4eRMi4kWvciGoeDD4z6ZGpG0-db5NM16Srp3W9UCfKraH3J4lNitZ4fA7wtHCfiqBg0S-O82SbUabL7hSUYNUCzJRWvPMAmHfIqxG1cb_BZAA4yOWm9olhn06xcihDwIfTAfRG386xy88HSQH_erQ2n24gZcyWg7rZQsLGZwJiNvfBkDqTfeB4itjUlAEyNVAUvi2FsxpOHZpTvrCmpOlao4SHFuMAv3E9E1IdR3x2Awnf1s7n1wtturSN6eGu1nl8E-hfUA2MfD5U5GIyg2lD2s0YSph4MvwCClrnfXyJMl_CUnYU4ivNvUcNTBHQCNKMxRCivNra7FIZaRCI_MJ7LJhf6sjevxwzUUdxJH8sx7iDGvbfBq6w4btBDbIIllGF)](https://www.plantuml.com/plantuml/png/ZLB1Ri8m3BtdAonE834-WCC4jDrKRIs8XZDocmWYqgHBqadz-vcMJaNQOQSaVi_FptOsFg0BRQrPK45BAEHNAqqbuGKoEZ5WW8EiI-pGeO4FzCenXbMmxl4eRMi4kWvciGoeDD4z6ZGpG0-db5NM16Srp3W9UCfKraH3J4lNitZ4fA7wtHCfiqBg0S-O82SbUabL7hSUYNUCzJRWvPMAmHfIqxG1cb_BZAA4yOWm9olhn06xcihDwIfTAfRG386xy88HSQH_erQ2n24gZcyWg7rZQsLGZwJiNvfBkDqTfeB4itjUlAEyNVAUvi2FsxpOHZpTvrCmpOlao4SHFuMAv3E9E1IdR3x2Awnf1s7n1wtturSN6eGu1nl8E-hfUA2MfD5U5GIyg2lD2s0YSph4MvwCClrnfXyJMl_CUnYU4ivNvUcNTBHQCNKMxRCivNra7FIZaRCI_MJ7LJhf6sjevxwzUUdxJH8sx7iDGvbfBq6w4btBDbIIllGF)
+ 
+---
+ 
+### 4. Melihat/Cetak Invoice
+- [![Melihat/Cetak Invoice](https://www.plantuml.com/plantuml/png/XL9DIyD04BtlhnXoKcZnteEKfe91WqBZMQR9M9ViHzoT2FdtJZO9MAnw6zvxCszuCzl86BYtHh5cGt2WZvvSJR26aen-Hxx9YR65mdrwNPDIMBCFy81H1tNqlMim393Teq6BRf5bW15U2bLxny4RoAg0BaghzYwVC4CXgQfSaHFpuKnK-eRCn9UgGSOZHe9iFrU9sU-KIdl0-bRCO0ExlaNGywQ225xbWi_GbGyDXQAvLeAEN2dSctRDquX_OykHtU-4FTmztkKL92gkeEuZUokb4dQzZ1ZtcoGN1nTCDlux_LMFiXKq4hSsgOZwv2uuZSABHiyuMCdoJwzkrlmSsv4zue1oWzIsP3TPJW628NTgiKlkI-Y1dBYTnIxKT9WDCDfEcrPUOn6SdwnEt_LBiy71zmnTq8xLLdpaKRy0)](https://www.plantuml.com/plantuml/png/XL9DIyD04BtlhnXoKcZnteEKfe91WqBZMQR9M9ViHzoT2FdtJZO9MAnw6zvxCszuCzl86BYtHh5cGt2WZvvSJR26aen-Hxx9YR65mdrwNPDIMBCFy81H1tNqlMim393Teq6BRf5bW15U2bLxny4RoAg0BaghzYwVC4CXgQfSaHFpuKnK-eRCn9UgGSOZHe9iFrU9sU-KIdl0-bRCO0ExlaNGywQ225xbWi_GbGyDXQAvLeAEN2dSctRDquX_OykHtU-4FTmztkKL92gkeEuZUokb4dQzZ1ZtcoGN1nTCDlux_LMFiXKq4hSsgOZwv2uuZSABHiyuMCdoJwzkrlmSsv4zue1oWzIsP3TPJW628NTgiKlkI-Y1dBYTnIxKT9WDCDfEcrPUOn6SdwnEt_LBiy71zmnTq8xLLdpaKRy0)
+ 
+---
+ 
+### 5. Memproses Pengambilan Barang
+- [![Memproses Pengambilan Barang](https://www.plantuml.com/plantuml/png/TLBBJiCm4BpxArOzWQ1yG2LGcmSewbDDUgwsoIgrOZl1Tf3wzsppW1Q9aotlpEpihEVEe_MjLi9BhmXI-cp9v0HJM9DkREt8mOvCYVea5He8qA8fXS3SrnQMwAGLfxer1TeBJ2BoA1KJ71eq4q07XqJajV6sLZ39cEkOAMiJzc-AR8VAGb6WnnCwOfNXrbMYG8Yk3KpVM0nci5IoWi5QysjDS94XMSYGlDQD8ayxcLTjyr3RWcnIF0ekZf0lLB9WNGZJ_JiKF1hR8QYwYNfS530kY3-I3MJxnIPTX5cotTmMqtWLXnbq-i_Gu4MJyU1QhJaEmP3fs8vpzgthaLstXlG9BzSq1IhcNAyUF5aUgJrB0N3Jvx2B5bdSizrBTnm7nTUVOOjxJh99u_tWRG0VpzBnsYxtm72xNYVPy3Q6xDgAynMaU26ZDywh-i_XVhjQ1Ojm-KUcn18LF04gv2yXo1JTchZSxtG67dKZLSM9dFb5YJbZ-3z-0m)](https://www.plantuml.com/plantuml/png/TLBBJiCm4BpxArOzWQ1yG2LGcmSewbDDUgwsoIgrOZl1Tf3wzsppW1Q9aotlpEpihEVEe_MjLi9BhmXI-cp9v0HJM9DkREt8mOvCYVea5He8qA8fXS3SrnQMwAGLfxer1TeBJ2BoA1KJ71eq4q07XqJajV6sLZ39cEkOAMiJzc-AR8VAGb6WnnCwOfNXrbMYG8Yk3KpVM0nci5IoWi5QysjDS94XMSYGlDQD8ayxcLTjyr3RWcnIF0ekZf0lLB9WNGZJ_JiKF1hR8QYwYNfS530kY3-I3MJxnIPTX5cotTmMqtWLXnbq-i_Gu4MJyU1QhJaEmP3fs8vpzgthaLstXlG9BzSq1IhcNAyUF5aUgJrB0N3Jvx2B5bdSizrBTnm7nTUVOOjxJh99u_tWRG0VpzBnsYxtm72xNYVPy3Q6xDgAynMaU26ZDywh-i_XVhjQ1Ojm-KUcn18LF04gv2yXo1JTchZSxtG67dKZLSM9dFb5YJbZ-3z-0m)
+ 
+---
+ 
+### 6. Mengelola Produk
+- [![Mengelola Produk](https://www.plantuml.com/plantuml/png/VL6xRiCm3Dpr5OIdTZ2oPoZIs2wGmQsHnmVG5fkubILNebBaxyl8TiPEadYdUu2RmEWv3aPnpuRWG3-HR4UGGqtsJCOPXCOx7R-LmewTXuzVIrwrBbgD_WPPZHQ_Q20xypB00AUTwfnbxmnaQTnnCRqD-SHe2aLMJ6yFGkqqcGchbKR65WD1LiwtX9HRfL80o5_41DPmnA75owhIFSCu1PMve4qXQC0hpV9FutJUzPwLe0ldYgRN67ee3litq6YXjsFaXLB_ArFVEULMEBltGxK_havD-NgiO6O59LY-o5p4nK3eXn5j-lg8oSWn9CUbbwSmEXiejP7Xr7ej-JvbPNDLOF8j-gWsPBLiyGy)](https://www.plantuml.com/plantuml/png/VL6xRiCm3Dpr5OIdTZ2oPoZIs2wGmQsHnmVG5fkubILNebBaxyl8TiPEadYdUu2RmEWv3aPnpuRWG3-HR4UGGqtsJCOPXCOx7R-LmewTXuzVIrwrBbgD_WPPZHQ_Q20xypB00AUTwfnbxmnaQTnnCRqD-SHe2aLMJ6yFGkqqcGchbKR65WD1LiwtX9HRfL80o5_41DPmnA75owhIFSCu1PMve4qXQC0hpV9FutJUzPwLe0ldYgRN67ee3litq6YXjsFaXLB_ArFVEULMEBltGxK_havD-NgiO6O59LY-o5p4nK3eXn5j-lg8oSWn9CUbbwSmEXiejP7Xr7ej-JvbPNDLOF8j-gWsPBLiyGy)
+ 
+---
+ 
+### 7. Mengelola Varian Produk
+- [![Mengelola Varian Produk](https://www.plantuml.com/plantuml/png/VL6nJiCm4Dtz5QTCC5JTEw3I94Cb0X5DMT4blj9GnmxskQX_Zsid5InizhttxhsxMpj6otvGWdjM13lwygGxWWLKf3z86ONmXhP73RKrqf-4m8wDXPTlJLQqnck9zW9PXHe_QI0zqJD01_kjw8ncQnHaKTvndlwAR6JKkI0Tl2ytGcKagOHLGY9ZYuuWAwPNH8gD4340B1w22QoWmQ75uxAKFSCv1X2X7j0w3wZ3CwLOV9TGllQx5m6TEMTKlKJNGwz7ppDI_QkkhfnY4pYxygdC6nZJ34w4ucBMn-8f6VpMR9ztvMkptDV5OrFEqlV9uM-BOmYcmFN360QxjhXDniZUnRJpAYovqMX7SG6Xc1Qr0ec7SEnfEy1aMxHUh4dBSFyV)](https://www.plantuml.com/plantuml/png/VL6nJiCm4Dtz5QTCC5JTEw3I94Cb0X5DMT4blj9GnmxskQX_Zsid5InizhttxhsxMpj6otvGWdjM13lwygGxWWLKf3z86ONmXhP73RKrqf-4m8wDXPTlJLQqnck9zW9PXHe_QI0zqJD01_kjw8ncQnHaKTvndlwAR6JKkI0Tl2ytGcKagOHLGY9ZYuuWAwPNH8gD4340B1w22QoWmQ75uxAKFSCv1X2X7j0w3wZ3CwLOV9TGllQx5m6TEMTKlKJNGwz7ppDI_QkkhfnY4pYxygdC6nZJ34w4ucBMn-8f6VpMR9ztvMkptDV5OrFEqlV9uM-BOmYcmFN360QxjhXDniZUnRJpAYovqMX7SG6Xc1Qr0ec7SEnfEy1aMxHUh4dBSFyV)
+ 
+---
+ 
+### 8. Mengelola Opsi Varian
+- [![Mengelola Opsi Varian](https://www.plantuml.com/plantuml/png/XP9FJyCm3CNl-HHMJo1jsfq36cjxc4HPnJgkaziQLfOc9N4tZK-FswmJd3ZbZtzvVdxAqZCwxbkjk65DiAMldan5C8UCp0Tfgn4sdM_W3Ls3HYcis3hOd0qvLThUrEWk46Ley9DQCh_X2D33RgqgQzXP3L7kRDrN78Up9ZSIUQp8IFlB3SXiJJhKCbKZOucU84gkkx6Ih9GQNS3yKPh00nJObdXOf7N3O0SNfs1PYeBaiI0UJnIyyQRZnfexEow3yhqIP09Fg9iQHQC_zWxD3Cxe3Cx0iprENFQ_O3Q0oKh0RVgSnWLqOS1ziCPU59jlagMosZglX9rFsiFWmSXleVNBDdqj5hiyUIhIwuYy3rt_lZ-8VotwRISX30gt51Yvz-COKtQEV2VlQGnBBaEoWuTt-I0XJYPNeklLaamjF-O7)](https://www.plantuml.com/plantuml/png/XP9FJyCm3CNl-HHMJo1jsfq36cjxc4HPnJgkaziQLfOc9N4tZK-FswmJd3ZbZtzvVdxAqZCwxbkjk65DiAMldan5C8UCp0Tfgn4sdM_W3Ls3HYcis3hOd0qvLThUrEWk46Ley9DQCh_X2D33RgqgQzXP3L7kRDrN78Up9ZSIUQp8IFlB3SXiJJhKCbKZOucU84gkkx6Ih9GQNS3yKPh00nJObdXOf7N3O0SNfs1PYeBaiI0UJnIyyQRZnfexEow3yhqIP09Fg9iQHQC_zWxD3Cxe3Cx0iprENFQ_O3Q0oKh0RVgSnWLqOS1ziCPU59jlagMosZglX9rFsiFWmSXleVNBDdqj5hiyUIhIwuYy3rt_lZ-8VotwRISX30gt51Yvz-COKtQEV2VlQGnBBaEoWuTt-I0XJYPNeklLaamjF-O7)
+ 
+---
+ 
+### 9. Mengelola Tipe Sablon
+- [![Mengelola Tipe Sablon](https://www.plantuml.com/plantuml/png/TP8nRy8m48Lt_ufJfdP0tHag845L1eS8p8mkyHLIENPgNwZoxsiIWbZOplwUxzuzUHKOFVUj4Tom8JZGRq-s9bY097icumo2Qhf8i3BE2e4rEm-xFqjULAwt6lq0YKIBFzIIVHOdW06EkQYTPUyC9ALtkgyvdSw6_AWeKq4sZXyU0kaqcOb9eP6nma2GPFTg9Db6YD45B3xZ45Y2mhR2oyTMDmnySn4con56IPb6IS0hJTxKqD7RhVMxY6JcLpIDnj10OxkUPo9VlfGtdcqYtso_yWBKVbqSrgdATyKpp8l3Tgy-ZcMsLjkxhHF7Fk6rgaQci_F3wPKytKcPAn7hnMpo4gqR24tReHsbZxqPkG_ZFdDQdaBdRA0nddWvPRa4ZT_nIpm724o-Gj-B5LaTlye_)](https://www.plantuml.com/plantuml/png/TP8nRy8m48Lt_ufJfdP0tHag845L1eS8p8mkyHLIENPgNwZoxsiIWbZOplwUxzuzUHKOFVUj4Tom8JZGRq-s9bY097icumo2Qhf8i3BE2e4rEm-xFqjULAwt6lq0YKIBFzIIVHOdW06EkQYTPUyC9ALtkgyvdSw6_AWeKq4sZXyU0kaqcOb9eP6nma2GPFTg9Db6YD45B3xZ45Y2mhR2oyTMDmnySn4con56IPb6IS0hJTxKqD7RhVMxY6JcLpIDnj10OxkUPo9VlfGtdcqYtso_yWBKVbqSrgdATyKpp8l3Tgy-ZcMsLjkxhHF7Fk6rgaQci_F3wPKytKcPAn7hnMpo4gqR24tReHsbZxqPkG_ZFdDQdaBdRA0nddWvPRa4ZT_nIpm724o-Gj-B5LaTlye_)
+ 
+---
+ 
+### 10. Mengelola Stok
+- [![Mengelola Stok](https://www.plantuml.com/plantuml/png/RP9DJiCm48NtFiKeAv0e1-W2bIQLg4H4KDerciIZrjIrKtiCulPCdGPHnCxnU--RdtWH6GEderLis1AqT4haUe8PrEHsPBr5QDaVbCAUVO2NJqT1TJuvZU4BYYUqU4INFGLWXErQzTvny1QA9dYTUYx7RqiXEvfIaPDoafPKVwYz9fkLjbOQ6JkC14LrEMMbMYgLIyFiGKh07BOTxk6KS2J5SujoBsfJYfe60T7hHRxn0nllrlhk9t6hn3UvFz0QZT60SKFY4JRARIqowlSKEVVwBqbCOgsMOcrNpwjo8y1WH7qRtL69Dfjevmbp2JXlxdTusrIFczNVyFrKw8gobtRjPSpCc6R9PARGOKXvY6bXWU8WECfhaijndNDWF0x67kGVNaKNvBIyYsy)](https://www.plantuml.com/plantuml/png/RP9DJiCm48NtFiKeAv0e1-W2bIQLg4H4KDerciIZrjIrKtiCulPCdGPHnCxnU--RdtWH6GEderLis1AqT4haUe8PrEHsPBr5QDaVbCAUVO2NJqT1TJuvZU4BYYUqU4INFGLWXErQzTvny1QA9dYTUYx7RqiXEvfIaPDoafPKVwYz9fkLjbOQ6JkC14LrEMMbMYgLIyFiGKh07BOTxk6KS2J5SujoBsfJYfe60T7hHRxn0nllrlhk9t6hn3UvFz0QZT60SKFY4JRARIqowlSKEVVwBqbCOgsMOcrNpwjo8y1WH7qRtL69Dfjevmbp2JXlxdTusrIFczNVyFrKw8gobtRjPSpCc6R9PARGOKXvY6bXWU8WECfhaijndNDWF0x67kGVNaKNvBIyYsy)
+ 
+---
+ 
+### 11. Mengelola Status Produksi/Pesanan
+- [![Mengelola Status Produksi/Pesanan](https://www.plantuml.com/plantuml/png/TPDDRzim38Rl-XL4JXsmhFSUXYQEEnXBui1Mpm5Z4wbWHSeaEaN-_MXRsReYEraW7_BbbvyZO-3-P1KRjWGr_Uh9DGHps90xalKMeMRaFi8k-BRleddSKKI7JYbis0Setnq5TV2zQp5SOROYHcCXKJF02A-5QhpZu2tCT40N9T9ubqqsIs6aTAPQP3nW9CcINgDdjLHgb87vTqa6Jx0prhn1d2exK31Tp-wAIfo2w4oG_YpPQ2h-mOUMGj5-1KVla-cB4kh6Nj2Q5gE1hAvUe4K7KXU17rkRkDLIk6N-ezY2hXRRUf7fejn-TDRvEiyqZ58HNieANdUhXSwLUEStfLHoH6GmpjmjWeSH6NbCi4BBVsqZfG0-24yoIVZR-Dcdq7-uObldLIem0Vit4sM9Lm47bLHTWt83ifT1vvxI6QydSXobPGqNRzh_aXSC1Xtl_NbOU8H0Wno9a6ywYI7tgPUit6mAdMotRKUvEugAh5p6dq6m3AkxDuwgNA-NY-pdfoH7FA9LW-1m96ATBke964zdOpjPUcgVAHmmzEfPOFatVWC)](https://www.plantuml.com/plantuml/png/TPDDRzim38Rl-XL4JXsmhFSUXYQEEnXBui1Mpm5Z4wbWHSeaEaN-_MXRsReYEraW7_BbbvyZO-3-P1KRjWGr_Uh9DGHps90xalKMeMRaFi8k-BRleddSKKI7JYbis0Setnq5TV2zQp5SOROYHcCXKJF02A-5QhpZu2tCT40N9T9ubqqsIs6aTAPQP3nW9CcINgDdjLHgb87vTqa6Jx0prhn1d2exK31Tp-wAIfo2w4oG_YpPQ2h-mOUMGj5-1KVla-cB4kh6Nj2Q5gE1hAvUe4K7KXU17rkRkDLIk6N-ezY2hXRRUf7fejn-TDRvEiyqZ58HNieANdUhXSwLUEStfLHoH6GmpjmjWeSH6NbCi4BBVsqZfG0-24yoIVZR-Dcdq7-uObldLIem0Vit4sM9Lm47bLHTWt83ifT1vvxI6QydSXobPGqNRzh_aXSC1Xtl_NbOU8H0Wno9a6ywYI7tgPUit6mAdMotRKUvEugAh5p6dq6m3AkxDuwgNA-NY-pdfoH7FA9LW-1m96ATBke964zdOpjPUcgVAHmmzEfPOFatVWC)
+ 
+---
+ 
+### 12. Melihat Dashboard/Laporan
+- [![Melihat Dashboard/Laporan](https://www.plantuml.com/plantuml/png/VPB1QiCm38RlVWhHqmOhk_SmIjCU1WqTP7i09LPR4yVEP6TRttwgdOn2M6z1_wzFlwoiGqIEGsTLDD4ILFGva6i8bb2IDMUCiCLmhZsoVjvZxncTKjX4pt3uTiIgzeFJo1TOp8mBm00VhwhnBhAtDuuYLonnycmBHKu2t49AhybcjLGQ8zOOwAhdhwnib4efOFaYWs05cw55q7z1x9XOD75i2t4Of-dduMXi97uZDZBcKOaowLzeZG0CPCiabI85j1IgeUjatP4WhMNIDw9Nk_skU0VFcZWyGO-NJjOAIiJbnBXk0cpSgSKWmMxeJ8su3wdv3ZtRnY5pT4-2HGVINICFi_Z5MUvz1vyW9yQZQUVmgLxcUf7guridHnettO99dfh_kOQOykLM4B7hZMqbz6HOIwVyaxy)](https://www.plantuml.com/plantuml/png/VPB1QiCm38RlVWhHqmOhk_SmIjCU1WqTP7i09LPR4yVEP6TRttwgdOn2M6z1_wzFlwoiGqIEGsTLDD4ILFGva6i8bb2IDMUCiCLmhZsoVjvZxncTKjX4pt3uTiIgzeFJo1TOp8mBm00VhwhnBhAtDuuYLonnycmBHKu2t49AhybcjLGQ8zOOwAhdhwnib4efOFaYWs05cw55q7z1x9XOD75i2t4Of-dduMXi97uZDZBcKOaowLzeZG0CPCiabI85j1IgeUjatP4WhMNIDw9Nk_skU0VFcZWyGO-NJjOAIiJbnBXk0cpSgSKWmMxeJ8su3wdv3ZtRnY5pT4-2HGVINICFi_Z5MUvz1vyW9yQZQUVmgLxcUf7guridHnettO99dfh_kOQOykLM4B7hZMqbz6HOIwVyaxy)
+ 
+---
+ 
+### 13. Mencatat Pembayaran Owner
+- [![Mencatat Pembayaran Owner](https://www.plantuml.com/plantuml/png/ZL91Ri8m4Bpx5IjE804Fu5018QqYDO28EQCbNe5LnwQsqog_xvAGAaWzz1HdPtPclEjbYEXZNHaHTJG41NtMP4k26UJynOWHzbITiK6F5dRVbhmGM4Rd7pzdLrk5le7HXY9gm_I05kq8CC0n4wMpqJi38ya2WJkriqbNC-HRbam4MVPldaYvKsGwF1UAavmn4BiyJYsoMGlHne3P2vl10Z9xgoFSVYCBhZ8c4yOybSwhFJOLsutvI3vJKxXrXRlmH32nft-XqGg3XgGul4w10nEukzaKhAkqHTEpyt-9JxlkJB5BVk_RhBbldRvbMv27rRPO9JBRROTWjYtIW-n5mX0gqlSqaL0Syt4Fpx7YPSJ97xGsJvXVU2Bg55tax6Y6SuAAMAE-QeXuqLSU7C10vhZVh6JQoxIV4p-TM8TdtYFma72wwi3FfU4Tgs6oP9VdcMmh_SGV5pbfrKwstwcdS7EMbn_gZq2XNIbZtU8NqDaCxnB9dz7NOicM_BP_00)](https://www.plantuml.com/plantuml/png/ZL91Ri8m4Bpx5IjE804Fu5018QqYDO28EQCbNe5LnwQsqog_xvAGAaWzz1HdPtPclEjbYEXZNHaHTJG41NtMP4k26UJynOWHzbITiK6F5dRVbhmGM4Rd7pzdLrk5le7HXY9gm_I05kq8CC0n4wMpqJi38ya2WJkriqbNC-HRbam4MVPldaYvKsGwF1UAavmn4BiyJYsoMGlHne3P2vl10Z9xgoFSVYCBhZ8c4yOybSwhFJOLsutvI3vJKxXrXRlmH32nft-XqGg3XgGul4w10nEukzaKhAkqHTEpyt-9JxlkJB5BVk_RhBbldRvbMv27rRPO9JBRROTWjYtIW-n5mX0gqlSqaL0Syt4Fpx7YPSJ97xGsJvXVU2Bg55tax6Y6SuAAMAE-QeXuqLSU7C10vhZVh6JQoxIV4p-TM8TdtYFma72wwi3FfU4Tgs6oP9VdcMmh_SGV5pbfrKwstwcdS7EMbn_gZq2XNIbZtU8NqDaCxnB9dz7NOicM_BP_00)
+ 
+---
 
 ### Q. Domain Class Diagram
-
-```plantuml
-@startuml
-class User {
-  userId
-  username
-  role
-  isActive
-}
-
-class ProductCategory {
-  categoryId
-  categoryName
-  isActive
-}
-
-class Product {
-  productId
-  productName
-  minimumOrder
-  isActive
-}
-
-class ProductVariant {
-  variantId
-  variantName
-  material
-  price
-  sleevePrice
-  isActive
-}
-
-class VariantOption {
-  optionId
-  sleeveType
-  quantity
-  priceSurcharge
-  isActive
-}
-
-class Size {
-  sizeId
-  sizeName
-  isActive
-}
-
-class Color {
-  colorId
-  colorName
-  isActive
-}
-
-class SablonType {
-  sablonTypeId
-  sablonName
-  notes
-  isActive
-}
-
-class CategorySablonType {
-  categorySablonId
-  isActive
-}
-
-class Customer {
-  customerId
-  name
-  phoneNumber
-  projectName
-}
-
-class Order {
-  orderId
-  orderCode
-  orderDate
-  orderStatus
-  grandTotal
-  cancelledAt
-  cancellationReason
-}
-
-class OrderItem {
-  orderItemId
-  productNameSnapshot
-  variantNameSnapshot
-  sablonPrice
-  unitPrice
-  itemNotes
-}
-
-class OrderItemDetail {
-  orderItemDetailId
-  quantity
-  sleeveType
-  fulfillmentType
-  customColor
-}
-
-class OrderItemDesign {
-  designId
-  filename
-  notes
-}
-
-class Payment {
-  paymentId
-  paymentDate
-  paymentMethod
-  amount
-  paymentStatus
-  paidAt
-  voidedAt
-  refundedAt
-}
-
-class OrderStatusHistory {
-  historyId
-  fromStatus
-  toStatus
-  changedAt
-  notes
-}
-
-ProductCategory "1" -- "0..*" Product
-Product "1" -- "0..*" ProductVariant
-ProductVariant "1" -- "0..*" VariantOption
-Size "1" -- "0..*" VariantOption
-Color "1" -- "0..*" VariantOption
-ProductCategory "1" -- "0..*" CategorySablonType
-SablonType "1" -- "0..*" CategorySablonType
-Customer "1" -- "0..*" Order
-User "1" -- "0..*" Order : creates
-Order "1" -- "1..*" OrderItem
-ProductVariant "0..1" -- "0..*" OrderItem
-SablonType "0..1" -- "0..*" OrderItem
-OrderItem "1" -- "1..*" OrderItemDetail
-VariantOption "0..1" -- "0..*" OrderItemDetail
-Size "1" -- "0..*" OrderItemDetail
-Color "0..1" -- "0..*" OrderItemDetail
-OrderItem "1" -- "0..*" OrderItemDesign
-Order "1" -- "0..*" Payment
-Order "1" -- "0..*" OrderStatusHistory
-User "0..1" -- "0..*" Payment : receives/voids/refunds
-User "0..1" -- "0..*" OrderStatusHistory : changes
-Payment "0..1" -- "0..*" Payment : reference
-@enduml
-```
+- [Class Diagram](https://www.plantuml.com/plantuml/uml/lLTDSnit3BtdL-pufAPsFguzHR5d6iyqZYToSeUMq2uYBgcIe3rkf_-zecXnfGLPsvEfJ_RYuH5u80bGJVF1CpWEWtxLD0qJQspEDNZVN11q3ePcGPvnQ2xDohe1F6qDIqscywyYmw_9R23wjP4rPtQq38oNhJKB-WkRTz4jWSqtZwxvEtutpLaJFBfBrVosNPgnGtTeDp3W5bcmsqRQ0nlm_iuwzGbyBq1djMIGdxTCjn7uQAr6C0dvjO70FHgc5XXd-uKp_nT9wC5_tHfcCSvLpaxw_dEWzzfP5Le-1yREkljHUljWASZFM0xoH47H7iN4V6ujgJsWK4BbFCVyDiaWqyjGCRk130rX-E8KEidygTm553OA63yVH9pz6S0myVqO-X71ty4Hc0FTjyaWTMUeh1iOjwWMmCPH6zqliAK1zDxiDU8jNfV1UfbQq6tGmFWHV6B7gepydpy83mNvic6oPYoBtNsBgcGbD_SRMHIv6qTLMGJNzk2wPrK0r8_WUS6sNTTtEmicl_EStm9fM6eiKsgNDtQliGH--oKBaEmlU5FFhRRke8_4psbQ6NZ1l1QmrDR4St1GicmJ6MQqcAAnZFw54j_tvfA0zWWJ8lw_d89dE-3XFYTBSQlBexAt1g_2i4GdCMT_OAc3vwvwxUoADCwEbZujBdfQNAwcB4s6BCiw9JLbuDmg8ImX5y0HYNzkQC0ZRC70mGjUvy2e6ykWPRzfmRIeDQevYrKp2h45VaNmrkJ5HMF-FKSHdJaNDoKuCtWtINLwKbBWcJkEAPlSDP2QLHfPBlebup0fV3GzCk4N1ZQ-jvoZosbOySatl3BbWY6kGCGuNEKMKApp8YnPLBac-m8PI4_5Pq2Me3ox7Xrugw1NfFM0XYMUBt7gu5LbAQUihr2cfqdsr9bHijfzbvJ6UsxgJRZS7zBoCy4zdR2gpo-u7z0SlZUJGIQOeUALp-XdvDugeG466moFzPgmYgqYebJk154AbY67gs0ac8esW5l7IofcGVp_eHO2IokMKB7ZISSdydpq8wDFXkAkEpjKrBEj06qFfYieh1yMXwrrwdp7cnL2dkPWppv1yw28_x3Tg5RRhgIKOQdB3xIKNOa3RUprWc2r-Wuwe2oDmRiAGfkvKWwzBCwT8yQjWbcELb4iVaMUl3zfpiwQatTlthm-sQDRre03QLhJ0MVd-reufsT-v30wHOuQ1IxpieEW7_qyc4ICp-MSMjbTKHSChC4qLcCVIQaPFeVrU4LAJxgOgkc0Wulq4NWAKz46UHT_0mfY_Fn0EwQdopWfopV_NsxB09oz8bnr10QzpI66J_PnRzwFph7tRmbBTEIB-ob3P5OKIfhwQOMgbBmtEQ-C57FB4tTIekCDb_44MH5ekmPFCR0uUaLILfTFNJsGu9J42LeUkgEuJ9jGylmxSitMd9XqTxX2XyRJg-hQSYAaqzy2by-QJCcWem7U7XoxjsaQrUcrg5rOGb-bvJQUd8CclnFs0OqAW_uN)
 
 ### R. ERD
 
