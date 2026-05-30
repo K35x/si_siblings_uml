@@ -885,7 +885,7 @@ flowchart LR
     P1 -->|1.6 Status autentikasi kasir| Kasir
 
     Owner -->|2.1 Data produk, varian, opsi, dan tipe sablon| P2
-    D2 -->|2.2 Data katalog produk| P2
+    D2 -->|2.2 Data Master produk| P2
     D3 -->|2.3 Data referensi ukuran, warna, dan tipe sablon| P2
     P2 -->|2.4 Perubahan data master produk produk| D2
     P2 -->|2.5 Perubahan asosiasi tipe sablon| D3
