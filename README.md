@@ -828,11 +828,30 @@ flowchart LR
     Kasir[Kasir]
     S((0. Sistem Informasi Siblings))
 
-    Owner -->|Data produk, varian, opsi, sablon, stok, status pesanan, periode laporan| S
-    S -->|Informasi katalog, stok, status pesanan, dashboard, laporan penjualan| Owner
+    Owner -->|1. Kredensial login owner| S
+    Kasir -->|2. Kredensial login kasir| S
+    S -->|3. Status autentikasi owner| Owner
+    S -->|4. Status autentikasi kasir| Kasir
 
-    Kasir -->|Data pesanan, item pesanan, pembayaran, permintaan invoice, data pengambilan| S
-    S -->|Invoice, status pembayaran, status pesanan, informasi pengambilan| Kasir
+    Owner -->|5. Data produk, varian, opsi, tipe sablon, dan stok| S
+    S -->|6. Informasi data master produk produk dan stok| Owner
+
+    Kasir -->|7. Data item pesanan dan data order| S
+    S -->|8. Nomor invoice dan ringkasan pesanan| Kasir
+
+    Kasir -->|9. Data pembayaran kasir| S
+    Owner -->|10. Data pembayaran owner| S
+    S -->|11. Status pembayaran kasir| Kasir
+    S -->|12. Status pembayaran owner| Owner
+
+    Owner -->|13. Data perubahan status produksi/pesanan| S
+    S -->|14. Status pesanan dan riwayat status| Owner
+
+    Kasir -->|15. Permintaan invoice dan data pengambilan| S
+    S -->|16. Invoice dan informasi pengambilan| Kasir
+
+    Owner -->|17. Periode/filter laporan| S
+    S -->|18. Dashboard dan laporan penjualan| Owner
 ```
 
 ### T. DFD Level 1
@@ -842,61 +861,75 @@ flowchart LR
     Owner[Owner]
     Kasir[Kasir]
 
-    P1((1.0 Mengelola Katalog Produk))
-    P2((2.0 Mencatat Pesanan))
-    P3((3.0 Mengelola Pembayaran))
-    P4((4.0 Mengelola Stok))
-    P5((5.0 Mengelola Status Pesanan))
-    P6((6.0 Menyajikan Invoice dan Pengambilan))
-    P7((7.0 Menyajikan Dashboard dan Laporan))
+    P1((1.0 Login))
+    P2((2.0 Mengelola Data Master Produk))
+    P3((3.0 Mencatat Pesanan))
+    P4((4.0 Mengelola Pembayaran))
+    P5((5.0 Mengelola Stok))
+    P6((6.0 Mengelola Status Pesanan))
+    P7((7.0 Mengelola Invoice dan Pengambilan Barang))
+    P8((8.0 Menampilkan Dashboard dan Laporan Penjualan Penjualan))
 
-    D1[(D1 Katalog Produk)]
-    D2[(D2 Data Stok)]
-    D3[(D3 Data Pesanan)]
-    D4[(D4 Data Pembayaran)]
-    D5[(D5 Riwayat Status Pesanan)]
+    D1[(D1 users)]
+    D2[(D2 product_categories, products, product_variants, variant_options)]
+    D3[(D3 sizes, colors, sablon_types, category_sablon_types)]
+    D4[(D4 orders, order_items, order_item_details, order_item_designs)]
+    D5[(D5 payments)]
+    D6[(D6 order_status_history)]
 
-    Owner -->|data produk/varian/opsi/sablon| P1
-    P1 -->|informasi katalog tersimpan| Owner
-    P1 <--> |data katalog| D1
+    Owner -->|1.1 Kredensial login owner| P1
+    Kasir -->|1.2 Kredensial login kasir| P1
+    P1 -->|1.3 Data user dan role| D1
+    D1 -->|1.4 Hasil validasi user dan role| P1
+    P1 -->|1.5 Status autentikasi owner| Owner
+    P1 -->|1.6 Status autentikasi kasir| Kasir
 
-    Kasir -->|data item pesanan dan data order| P2
-    D1 -->|data produk aktif dan harga| P2
-    D2 -->|ketersediaan stok| P2
-    P2 -->|data pesanan baru| D3
-    P2 -->|alokasi/pengurangan stok| D2
-    P2 -->|nomor invoice dan ringkasan pesanan| Kasir
+    Owner -->|2.1 Data produk, varian, opsi, dan tipe sablon| P2
+    D2 -->|2.2 Data katalog produk| P2
+    D3 -->|2.3 Data referensi ukuran, warna, dan tipe sablon| P2
+    P2 -->|2.4 Perubahan data master produk produk| D2
+    P2 -->|2.5 Perubahan asosiasi tipe sablon| D3
+    P2 -->|2.6 Informasi data master produk tersimpan| Owner
 
-    Kasir -->|data pembayaran| P3
-    Owner -->|data pembayaran bila dicatat owner| P3
-    D3 -->|total tagihan pesanan| P3
-    P3 -->|data pembayaran tersimpan| D4
-    P3 -->|status pembayaran| Kasir
-    P3 -->|status pembayaran| Owner
+    Kasir -->|3.1 Data item pesanan dan data order| P3
+    D2 -->|3.2 Data produk aktif dan harga| P3
+    D3 -->|3.3 Data ukuran, warna, dan tipe sablon aktif| P3
+    P3 -->|3.4 Data pesanan baru| D4
+    P3 -->|3.5 Alokasi/pengurangan stok| D2
+    P3 -->|3.6 Nomor invoice dan ringkasan pesanan| Kasir
 
-    Owner -->|data penyesuaian stok| P4
-    D1 -->|data varian dan opsi| P4
-    P4 <--> |data stok terbaru| D2
-    P4 -->|informasi stok| Owner
+    Kasir -->|4.1 Data pembayaran dari kasir| P4
+    Owner -->|4.2 Data pembayaran dari owner| P4
+    D4 -->|4.3 Total tagihan pesanan| P4
+    P4 -->|4.4 Data pembayaran tersimpan| D5
+    P4 -->|4.5 Perubahan status pembayaran/order| D4
+    P4 -->|4.6 Riwayat perubahan status pembayaran/order| D6
+    P4 -->|4.7 Status pembayaran untuk kasir| Kasir
+    P4 -->|4.8 Status pembayaran untuk owner| Owner
 
-    Owner -->|data perubahan status produksi/pesanan| P5
-    D3 -->|data pesanan| P5
-    D4 -->|data pembayaran| P5
-    P5 -->|status pesanan terbaru| D3
-    P5 -->|riwayat perubahan status| D5
-    P5 -->|status pesanan dan riwayat| Owner
+    Owner -->|5.1 Data penyesuaian stok| P5
+    D2 -->|5.2 Data varian dan opsi stok| P5
+    P5 -->|5.3 Data stok terbaru| D2
+    P5 -->|5.4 Informasi stok| Owner
 
-    Kasir -->|permintaan invoice dan data pengambilan| P6
-    D3 -->|data pesanan siap tampil| P6
-    D4 -->|data pembayaran pesanan| P6
-    D5 -->|status pesanan terakhir| P6
-    P6 -->|invoice dan status pengambilan| Kasir
-    P6 -->|data penyelesaian pengambilan| D3
-    P6 -->|riwayat penyelesaian pesanan| D5
+    Owner -->|6.1 Data perubahan status produksi/pesanan| P6
+    D4 -->|6.2 Data pesanan| P6
+    D5 -->|6.3 Data pembayaran pesanan| P6
+    P6 -->|6.4 Status pesanan terbaru| D4
+    P6 -->|6.5 Riwayat perubahan status| D6
+    P6 -->|6.6 Status pesanan dan riwayat| Owner
 
-    Owner -->|periode/filter laporan| P7
-    D3 -->|data pesanan| P7
-    D4 -->|data pembayaran| P7
-    D5 -->|data status pesanan| P7
-    P7 -->|dashboard dan laporan penjualan| Owner
+    Kasir -->|7.1 Permintaan invoice dan data pengambilan| P7
+    D4 -->|7.2 Data pesanan siap tampil| P7
+    D5 -->|7.3 Data pembayaran pesanan| P7
+    D6 -->|7.4 Status pesanan terakhir| P7
+    P7 -->|7.5 Invoice dan informasi pengambilan| Kasir
+    P7 -->|7.6 Data penyelesaian pengambilan| D4
+    P7 -->|7.7 Riwayat penyelesaian pesanan| D6
+
+    Owner -->|8.1 Periode/filter laporan| P8
+    D4 -->|8.2 Data pesanan| P8
+    D5 -->|8.3 Data pembayaran| P8
+    D6 -->|8.4 Data status pesanan| P8
+    P8 -->|8.5 Dashboard dan laporan penjualan| Owner
 ```
