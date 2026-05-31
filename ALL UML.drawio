@@ -2398,7 +2398,7 @@
     </mxGraphModel>
   </diagram>
   <diagram id="_scUjrYAeoTGdx9N2PkL" name="Page-9">
-    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="900" pageHeight="700" math="0" shadow="0">
+    <mxGraphModel dx="7425" dy="4220" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="900" pageHeight="700" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -5378,11 +5378,436 @@
             </Array>
           </mxGeometry>
         </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-129" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="1955" width="1330" x="8470" y="1930" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-65" parent="-6EcscLglLGxOLLLm7bP-129" style="whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="Owner" vertex="1">
+          <mxGeometry height="110" width="215" y="320" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-66" parent="-6EcscLglLGxOLLLm7bP-129" style="whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="Kasir" vertex="1">
+          <mxGeometry height="110" width="215" x="1010" y="411" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-67" parent="-6EcscLglLGxOLLLm7bP-129" style="ellipse;aspect=fixed;whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=15;labelBackgroundColor=default;" value="1.0 Login" vertex="1">
+          <mxGeometry height="171" width="171" x="280" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-68" parent="-6EcscLglLGxOLLLm7bP-129" style="ellipse;aspect=fixed;whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="4.0 Mengelola Pembayaran" vertex="1">
+          <mxGeometry height="206" width="206" x="262.5" y="682" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-69" parent="-6EcscLglLGxOLLLm7bP-129" style="ellipse;aspect=fixed;whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="5.0 Mengelola Stok" vertex="1">
+          <mxGeometry height="210" width="210" x="252.5" y="960" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-70" parent="-6EcscLglLGxOLLLm7bP-129" style="ellipse;aspect=fixed;whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="8.0 Menampilkan Dashboard dan Laporan Penjualan Penjualan" vertex="1">
+          <mxGeometry height="215" width="215" x="258" y="1740" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-71" parent="-6EcscLglLGxOLLLm7bP-129" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;strokeColor=default;fontColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fillColor=none;" value="&lt;font style=&quot;font-size: 20px;&quot;&gt;D1 users&lt;/font&gt;" vertex="1">
+          <mxGeometry height="150" width="220" x="640" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-72" parent="-6EcscLglLGxOLLLm7bP-129" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fillColor=none;" value="D2 product_categories, products, product_variants, variant_options" vertex="1">
+          <mxGeometry height="158" width="215" x="640" y="180" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-73" parent="-6EcscLglLGxOLLLm7bP-129" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;strokeColor=default;fontColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fillColor=none;" value="D4 orders, order_items, order_item_details, order_item_designs" vertex="1">
+          <mxGeometry height="134" width="215" x="650" y="650" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-74" parent="-6EcscLglLGxOLLLm7bP-129" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;strokeColor=default;fontColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fillColor=none;" value="D5 payments" vertex="1">
+          <mxGeometry height="130" width="187.97" x="640" y="910" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-75" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-65" style="startArrow=none;endArrow=block;exitX=0.59;exitY=0.01;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" target="-6EcscLglLGxOLLLm7bP-67" value="1.1 Kredensial login owner">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="320" />
+              <mxPoint x="40" y="130" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-76" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" style="startArrow=none;endArrow=block;entryX=0.63;entryY=0.99;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" target="-6EcscLglLGxOLLLm7bP-67" value="1.2 Kredensial login kasir">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1060" y="168" />
+            </Array>
+            <mxPoint x="1060" y="410" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-77" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-67" style="startArrow=none;endArrow=block;exitX=0.981;exitY=0.39;entryX=0;entryY=0.44;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-71" value="1.3 Data user dan role">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-78" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-71" style="startArrow=none;endArrow=block;exitX=0;exitY=0.63;entryX=0.989;entryY=0.587;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-67" value="1.4 Hasil validasi user dan role">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-79" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-67" style="startArrow=none;endArrow=block;exitX=0;exitY=0.58;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" target="-6EcscLglLGxOLLLm7bP-65" value="1.5 Status autentikasi owner">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="10" y="99" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-80" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-123" style="startArrow=none;endArrow=block;exitX=0.952;exitY=0.734;entryX=0.313;entryY=0.978;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=elbowEdgeStyle;elbow=vertical;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-66" value="1.6 Status autentikasi kasir">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="760" y="590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-81" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-65" style="startArrow=none;endArrow=block;exitX=0.565;exitY=-0.01;entryX=0.005;entryY=0.508;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-122" value="2.1 Data produk, varian, opsi, dan tipe sablon">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="100" y="319" />
+              <mxPoint x="100" y="260" />
+              <mxPoint x="220" y="260" />
+              <mxPoint x="220" y="326" />
+              <mxPoint x="298" y="326" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-82" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-72" style="startArrow=none;endArrow=block;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=orthogonalEdgeStyle;elbow=vertical;exitX=-0.005;exitY=0.044;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-122" value="2.2 Data Master produk">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="366" y="187" />
+            </Array>
+            <mxPoint x="860" y="220" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-83" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-127" style="startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=1;entryY=0.93;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;" target="-6EcscLglLGxOLLLm7bP-122" value="2.3 Data referensi ukuran, warna, dan tipe sablon">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="738" y="381" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-84" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-122" style="startArrow=none;endArrow=block;exitX=0.909;exitY=0.191;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;" value="2.4 Perubahan data master produk produk">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="440" y="273" />
+              <mxPoint x="440" y="220" />
+              <mxPoint x="639" y="220" />
+            </Array>
+            <mxPoint x="640" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-85" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-122" style="startArrow=none;endArrow=block;exitX=1;exitY=0.47;entryX=0.376;entryY=-0.01;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-127" value="2.5 Perubahan asosiasi tipe sablon">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="520" y="321" />
+              <mxPoint x="520" y="350" />
+              <mxPoint x="711" y="350" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-86" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-122" style="startArrow=none;endArrow=block;exitX=0.006;exitY=0.411;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;" value="2.6 Informasi data master produk tersimpan">
+          <mxGeometry relative="1" x="-0.0002" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="260" y="310" />
+              <mxPoint x="260" y="230" />
+              <mxPoint x="90" y="230" />
+              <mxPoint x="90" y="320" />
+            </Array>
+            <mxPoint x="90" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-87" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-66" style="startArrow=none;endArrow=block;exitX=0.009;exitY=0.886;entryX=1;entryY=0.567;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-123" value="3.1 Data item pesanan dan data order">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1000" y="508" />
+              <mxPoint x="1000" y="560" />
+              <mxPoint x="460" y="560" />
+              <mxPoint x="460" y="537" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-88" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-127" style="startArrow=none;endArrow=block;entryX=0.93;entryY=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitX=-0.001;exitY=0.412;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-123" value="3.2 Data produk aktif dan harga">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="460" />
+              <mxPoint x="541" y="460" />
+            </Array>
+            <mxPoint x="600" y="440" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-89" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-127" style="startArrow=none;endArrow=block;exitX=0;exitY=0.75;entryX=1.003;entryY=0.392;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;elbow=vertical;edgeStyle=orthogonalEdgeStyle;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-123" value="3.3 Data ukuran, warna, dan tipe sablon aktif">
+          <mxGeometry relative="1" x="-0.0954" y="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-90" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-123" style="startArrow=none;endArrow=block;exitX=0.65;exitY=1;entryX=0.25;entryY=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;" target="-6EcscLglLGxOLLLm7bP-73" value="3.4 Data pesanan baru">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-91" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-123" style="startArrow=none;endArrow=block;exitX=0.83;exitY=0;entryX=0;entryY=0.4;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" target="-6EcscLglLGxOLLLm7bP-72" value="3.5 Alokasi/pengurangan stok">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-92" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-123" style="startArrow=none;endArrow=block;exitX=0.729;exitY=0.052;entryX=0.76;entryY=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;metaEdit=1;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-66" value="3.6 Nomor invoice dan ringkasan pesanan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="405" y="401" />
+              <mxPoint x="1173" y="401" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-93" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-66" style="startArrow=none;endArrow=block;exitX=0.65;exitY=1;rounded=0;edgeStyle=elbowEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;elbow=vertical;entryX=0.978;entryY=0.621;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-68" value="4.1 Data pembayaran dari kasir">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="720" y="810" />
+            </Array>
+            <mxPoint x="470" y="810" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-94" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-65" style="startArrow=none;endArrow=block;exitX=0.62;exitY=1.01;entryX=0;entryY=0.28;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" target="-6EcscLglLGxOLLLm7bP-68" value="4.2 Data pembayaran dari owner">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="133" y="744" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-95" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-73" style="startArrow=none;endArrow=block;exitX=-0.015;exitY=0.33;entryX=0.726;entryY=0.054;rounded=0;edgeStyle=elbowEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;elbow=vertical;" target="-6EcscLglLGxOLLLm7bP-68" value="4.3 Total tagihan pesanan">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-96" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-68" style="startArrow=none;endArrow=block;exitX=0.99;exitY=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" value="4.4 Data pembayaran tersimpan">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="680" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-97" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-68" style="startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=-0.004;entryY=0.068;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;edgeStyle=orthogonalEdgeStyle;" target="-6EcscLglLGxOLLLm7bP-73" value="4.5 Perubahan status pembayaran/order">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-98" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-68" style="startArrow=none;endArrow=block;exitX=0.95;exitY=0;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;edgeStyle=orthogonalEdgeStyle;" value="4.6 Riwayat perubahan status pembayaran/order">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="510" y="709" />
+              <mxPoint x="510" y="1150" />
+            </Array>
+            <mxPoint x="650" y="1150" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-99" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-68" style="startArrow=none;endArrow=block;exitX=0.944;exitY=0.75;entryX=0.836;entryY=1.005;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-66" value="4.7 Status pembayaran untuk kasir">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1190" y="837" />
+              <mxPoint x="1190" y="530" />
+              <mxPoint x="1190" y="530" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-100" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-124" style="startArrow=none;endArrow=block;exitX=0;exitY=0.82;entryX=0.25;entryY=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;" target="-6EcscLglLGxOLLLm7bP-65" value="4.8 Status pembayaran untuk owner">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-101" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-72" style="startArrow=none;endArrow=block;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitX=0.829;exitY=1.001;exitDx=0;exitDy=0;exitPerimeter=0;entryX=1.013;entryY=0.456;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-69" value="5.2 Data varian dan opsi stok">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="818" y="350" />
+              <mxPoint x="990" y="350" />
+              <mxPoint x="990" y="1051" />
+              <mxPoint x="465" y="1051" />
+            </Array>
+            <mxPoint x="810" y="350" as="sourcePoint" />
+            <mxPoint x="430" y="1051" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-102" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-69" style="startArrow=none;endArrow=block;exitX=0.985;exitY=0.63;entryX=0.77;entryY=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-72" value="5.3 Data stok terbaru">
+          <mxGeometry relative="1" x="-0.1211" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="930" y="1092" />
+              <mxPoint x="930" y="338" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-103" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-69" style="startArrow=none;endArrow=block;exitX=0;exitY=0.85;entryX=0.892;entryY=1.005;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-65" value="5.4 Informasi stok">
+          <mxGeometry relative="1" x="0.1904" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="150" y="1125" />
+              <mxPoint x="150" y="431" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-104" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-65" style="startArrow=none;endArrow=block;exitX=0.67;exitY=1.01;entryX=0.035;entryY=0.605;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-124" value="6.1 Data perubahan status produksi/pesanan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="90" y="430" />
+              <mxPoint x="90" y="1340" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-105" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-73" style="startArrow=none;endArrow=block;exitX=0.94;exitY=1.01;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryX=0.991;entryY=0.408;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-124" value="6.2 Data pesanan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="880" y="784" />
+              <mxPoint x="880" y="1298" />
+            </Array>
+            <mxPoint x="480" y="1300" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-106" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-74" style="startArrow=none;endArrow=block;exitX=1;exitY=0.49;entryX=0.906;entryY=0.791;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-124" value="6.3 Data pembayaran pesanan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="838" y="974" />
+              <mxPoint x="838" y="1380" />
+              <mxPoint x="460" y="1380" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-107" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-124" style="startArrow=none;endArrow=block;exitX=1;exitY=0.5;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;" value="6.4 Status pesanan terbaru">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1090" y="1318" />
+              <mxPoint x="1090" y="730" />
+            </Array>
+            <mxPoint x="870" y="730" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-108" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-124" style="startArrow=none;endArrow=block;exitX=0.5;exitY=0;entryX=0;entryY=0.75;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;entryDx=0;entryDy=0;" target="-6EcscLglLGxOLLLm7bP-128" value="6.5 Riwayat perubahan status">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="370" y="1200" />
+              <mxPoint x="650" y="1200" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-109" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-124" style="startArrow=none;endArrow=block;exitX=0;exitY=0.77;entryX=0.103;entryY=1.026;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-65" value="6.6 Status pesanan dan riwayat">
+          <mxGeometry relative="1" x="-0.1558" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-110" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-66" style="startArrow=none;endArrow=block;exitX=1;exitY=0.22;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" target="-6EcscLglLGxOLLLm7bP-126" value="7.1 Permintaan invoice dan data pengambilan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="1330" y="435" />
+              <mxPoint x="1330" y="1538" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-111" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-73" style="startArrow=none;endArrow=block;exitX=0.65;exitY=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;" target="-6EcscLglLGxOLLLm7bP-126" value="7.2 Data pesanan siap tampil">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="790" y="630" />
+              <mxPoint x="180" y="630" />
+              <mxPoint x="180" y="1580" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-112" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-74" style="startArrow=none;endArrow=block;exitX=0.007;exitY=0.329;entryX=0.5;entryY=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-126" value="7.3 Data pembayaran pesanan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="641" y="950" />
+              <mxPoint x="560" y="950" />
+              <mxPoint x="560" y="1430" />
+              <mxPoint x="355" y="1430" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-113" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-128" style="startArrow=none;endArrow=block;exitX=-0.003;exitY=0.945;entryX=1;entryY=0;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-126" value="7.4 Status pesanan terakhir">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="630" y="1219" />
+              <mxPoint x="600" y="1220" />
+              <mxPoint x="600" y="1511" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-114" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-126" style="startArrow=none;endArrow=block;exitX=1;exitY=0.5;entryX=1;entryY=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;" target="-6EcscLglLGxOLLLm7bP-66" value="7.5 Invoice dan informasi pengambilan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="463" y="1590" />
+              <mxPoint x="1225" y="1590" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-115" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-126" style="startArrow=none;endArrow=block;exitX=0;exitY=0.66;entryX=0.998;entryY=0.115;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-73" value="7.6 Data penyelesaian pengambilan">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="253" y="1619" />
+              <mxPoint x="960" y="1619" />
+              <mxPoint x="960" y="665" />
+              <mxPoint x="865" y="665" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-116" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-126" style="startArrow=none;endArrow=block;exitX=0.752;exitY=0.932;entryX=1;entryY=0.5;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-128" value="7.7 Riwayat penyelesaian pesanan">
+          <mxGeometry relative="1" x="-0.7268" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-117" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-73" style="startArrow=none;endArrow=block;exitX=1.009;exitY=0.312;entryX=0.885;entryY=0.181;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-70" value="8.1 Data pesanan">
+          <mxGeometry relative="1" x="0.8951" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="867" y="690" />
+              <mxPoint x="1110" y="690" />
+              <mxPoint x="1110" y="1770" />
+              <mxPoint x="510" y="1770" />
+              <mxPoint x="510" y="1769" />
+              <mxPoint x="448" y="1769" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-118" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-128" style="startArrow=none;endArrow=block;exitX=0.88;exitY=0.99;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryX=0.996;entryY=0.436;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-70" value="8.2 Data pembayaran">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="814" y="1800" />
+              <mxPoint x="510" y="1800" />
+              <mxPoint x="510" y="1834" />
+            </Array>
+            <mxPoint x="470" y="1820" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-119" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-128" style="startArrow=none;endArrow=block;exitX=0.61;exitY=1;entryX=0.996;entryY=0.512;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;entryPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-70" value="8.3 Data status pesanan">
+          <mxGeometry relative="1" x="0.0002" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="763" y="1840" />
+              <mxPoint x="550" y="1840" />
+              <mxPoint x="550" y="1850" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-120" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-70" style="startArrow=none;endArrow=block;exitX=0;exitY=0.57;entryX=0;entryY=1;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;entryDx=0;entryDy=0;" target="-6EcscLglLGxOLLLm7bP-65" value="8.4 Dashboard dan laporan penjualan">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-121" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-65" style="startArrow=none;endArrow=block;exitX=0.328;exitY=0.022;entryX=0;entryY=0.32;rounded=0;edgeStyle=orthogonalEdgeStyle;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;" target="-6EcscLglLGxOLLLm7bP-122" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="71" y="320" />
+              <mxPoint x="70" y="320" />
+              <mxPoint x="70" y="200" />
+              <mxPoint x="303" y="200" />
+            </Array>
+            <mxPoint x="139" y="320" as="sourcePoint" />
+            <mxPoint x="1934" y="436" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-122" parent="-6EcscLglLGxOLLLm7bP-129" style="ellipse;aspect=fixed;whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="2.0 Mengelola Data Master Produk" vertex="1">
+          <mxGeometry height="171" width="171" x="280" y="240" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-123" parent="-6EcscLglLGxOLLLm7bP-129" style="ellipse;aspect=fixed;whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="3.0 Mencatat Pesanan" vertex="1">
+          <mxGeometry height="171" width="171" x="280" y="440" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-124" parent="-6EcscLglLGxOLLLm7bP-129" style="ellipse;aspect=fixed;whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="6.0 Mengelola Status Pesanan" vertex="1">
+          <mxGeometry height="215" width="215" x="258" y="1210" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-125" edge="1" parent="-6EcscLglLGxOLLLm7bP-129" source="-6EcscLglLGxOLLLm7bP-65" style="startArrow=none;endArrow=block;exitX=0.337;exitY=1;entryX=0;entryY=0.29;rounded=0;strokeColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;fontColor=default;labelBackgroundColor=default;exitDx=0;exitDy=0;exitPerimeter=0;edgeStyle=elbowEdgeStyle;elbow=vertical;" target="-6EcscLglLGxOLLLm7bP-126" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="150" y="1550" />
+            </Array>
+            <mxPoint x="119" y="430" as="sourcePoint" />
+            <mxPoint x="3736" y="1638" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-126" parent="-6EcscLglLGxOLLLm7bP-129" style="ellipse;aspect=fixed;whiteSpace=wrap;strokeColor=default;fontColor=default;rounded=0;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=11;labelBackgroundColor=default;" value="7.0 Mengelola Invoice dan Pengambilan Barang" vertex="1">
+          <mxGeometry height="215" width="215" x="247.5" y="1480" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-127" parent="-6EcscLglLGxOLLLm7bP-129" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=none;strokeColor=default;fontColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fillColor=none;" value="D3 sizes, colors, sablon_types, category_sablon_types" vertex="1">
+          <mxGeometry height="134" width="215" x="650" y="406" as="geometry" />
+        </mxCell>
+        <mxCell id="-6EcscLglLGxOLLLm7bP-128" parent="-6EcscLglLGxOLLLm7bP-129" style="shape=partialRectangle;whiteSpace=wrap;html=1;left=0;right=0;fillColor=default;strokeColor=default;fontColor=default;align=center;verticalAlign=middle;fontFamily=Helvetica;fontSize=12;fillColor=none;" value="D6 order_status_history" vertex="1">
+          <mxGeometry height="84" width="185" x="650" y="1140" as="geometry" />
+        </mxCell>
       </root>
     </mxGraphModel>
   </diagram>
   <diagram id="WFFeFlqR3KtTv6BfSXig" name="# ACTIVITY DIAGRAM">
-    <mxGraphModel dx="3710" dy="1408" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1100" pageHeight="1400" math="0" shadow="0">
+    <mxGraphModel grid="1" page="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" pageScale="1" pageWidth="1100" pageHeight="1400" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
