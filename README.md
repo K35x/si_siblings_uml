@@ -1,23 +1,5 @@
 ### Sequence Diagram
 
-| No | Judul | Aktor |
-|----|-------|-------|
-| 1 | [Membuat Pesanan](#1-membuat-pesanan) | Kasir |
-| 2 | [Menyimpan Pesanan](#2-menyimpan-pesanan) | Kasir |
-| 3 | [Mencatat Pembayaran (Kasir)](#3-mencatat-pembayaran-kasir) | Kasir |
-| 4 | [Melihat / Cetak Invoice](#4-melihatcetak-invoice) | Kasir |
-| 5 | [Memproses Pengambilan Barang](#5-memproses-pengambilan-barang) | Kasir |
-| 6 | [Mengelola Produk](#6-mengelola-produk) | Owner |
-| 7 | [Mengelola Varian Produk](#7-mengelola-varian-produk) | Owner |
-| 8 | [Mengelola Opsi Varian](#8-mengelola-opsi-varian) | Owner |
-| 9 | [Mengelola Tipe Sablon](#9-mengelola-tipe-sablon) | Owner |
-| 10 | [Mengelola Stok](#10-mengelola-stok) | Owner |
-| 11 | [Mengelola Status Produksi / Pesanan](#11-mengelola-status-produksipesanan) | Owner |
-| 12 | [Melihat Dashboard / Laporan](#12-melihat-dashboardlaporan) | Owner |
-| 13 | [Mencatat Pembayaran (Owner)](#13-mencatat-pembayaran-owner) | Owner |
- 
----
-
 ### 1. Membuat Pesanan
 - [![Membuat Pesanan](https://www.plantuml.com/plantuml/png/RPBTQkCm48NlzHH3hbf8Ng0NIpTE2sKt4AZt0SRH99bQ7dcbKM7VViToJVe7lZ3wZkQSW-O-AoOjGt3A6WYUwMyXEH9iO4z3Lr3XG1a5nJayQapm2pCdryKY7jC_M3t6D9Xcc5Khm0n_djmnYgOOODKcb6mtEKepdmLALTKsZiHSRSOXHL-Eke-UGcM7lVEes64cMEtU_YhPRPsh4M3pmupW3hQbHxXWm045nYM8CsQAjZ55cafbXTCKzQemPeh3tXHdqfgX_zahdsvkdPqQsssDFJ_yVcXQ62jVmoicHbb373El8MCNeZWJRfPPKt2pF54YoLmdBK4gcWS1Jaurmr94SHWvzDPY2lgffH6-V0dXIP43iDBmNU4BQv7pZEUs5RzYO6_JWMKiUiMBLowTHiMtkHzpMCWEBz2JVVQqBoZdzyxeVHiRMwcRwUxjUzVCmsZTflFfUgQSRIa-62UMSu_sEf-66vzJt5q1U1ufTPWAktiIRply7m)](https://www.plantuml.com/plantuml/png/RPBTQkCm48NlzHH3hbf8Ng0NIpTE2sKt4AZt0SRH99bQ7dcbKM7VViToJVe7lZ3wZkQSW-O-AoOjGt3A6WYUwMyXEH9iO4z3Lr3XG1a5nJayQapm2pCdryKY7jC_M3t6D9Xcc5Khm0n_djmnYgOOODKcb6mtEKepdmLALTKsZiHSRSOXHL-Eke-UGcM7lVEes64cMEtU_YhPRPsh4M3pmupW3hQbHxXWm045nYM8CsQAjZ55cafbXTCKzQemPeh3tXHdqfgX_zahdsvkdPqQsssDFJ_yVcXQ62jVmoicHbb373El8MCNeZWJRfPPKt2pF54YoLmdBK4gcWS1Jaurmr94SHWvzDPY2lgffH6-V0dXIP43iDBmNU4BQv7pZEUs5RzYO6_JWMKiUiMBLowTHiMtkHzpMCWEBz2JVVQqBoZdzyxeVHiRMwcRwUxjUzVCmsZTflFfUgQSRIa-62UMSu_sEf-66vzJt5q1U1ufTPWAktiIRply7m)
  
